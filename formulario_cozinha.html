@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Comprovação de Entrega</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Formulário de Comprovação de Entrega</h2>
+        
+        <label for="unidade">Nome da Unidade de Saúde:</label>
+        <input type="text" id="unidade" name="unidade" required>
+        
+        <label for="data">Data da Entrega:</label>
+        <input type="date" id="data" name="data" required>
+        
+        <label for="horario">Horário da Entrega:</label>
+        <input type="time" id="horario" name="horario" required>
+        
+        <label>Turno da Entrega:</label>
+        <select name="turno" required>
+            <option value="MT">MT (Manhã/Tarde)</option>
+            <option value="SN">SN (Segunda/Noite)</option>
+        </select>
+        
+        <label for="copeira">Nome da Copeira Responsável:</label>
+        <input type="text" id="copeira" name="copeira" required>
+        
+        <label for="quantidade">Quantidade total de refeições recebidas:</label>
+        <input type="number" id="quantidade" name="quantidade" required>
+        
+        <label>Alimentação recebida em boas condições?</label>
+        <select name="condicoes" required>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
+        
+        <label>Temperatura dos alimentos adequada?</label>
+        <select name="temperatura" required>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
+        
+        <label>Ilha de armazenamento funcionando corretamente?</label>
+        <select name="ilha" required>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
+        
+        <label for="cubas">Quantidade de cubas entregues:</label>
+        <input type="number" id="cubas" name="cubas" required>
+        
+        <label>Isobox entregue?</label>
+        <select name="isobox" required>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
+        
+        <label>Garrafa de suco entregue?</label>
+        <select name="suco" required>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
+        
+        <label>Sopa para pacientes entregue?</label>
+        <select name="sopa" required>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
+        
+        <label for="quantidade_sopa">Se sim, quantidade de sopa recebida:</label>
+        <input type="number" id="quantidade_sopa" name="quantidade_sopa">
+        
+        <label>Itens do Kit Semanal Recebidos:</label>
+        <input type="checkbox" name="kit" value="Café"> Café<br>
+        <input type="checkbox" name="kit" value="Açúcar"> Açúcar<br>
+        <input type="checkbox" name="kit" value="Ovo"> Ovo<br>
+        <input type="checkbox" name="kit" value="Pão"> Pão<br>
+        <input type="checkbox" name="kit" value="Copo descartável"> Copo descartável<br>
+        <input type="checkbox" name="kit" value="Sal"> Sal<br>
+        <input type="checkbox" name="kit" value="Azeite"> Azeite<br>
+        <input type="checkbox" name="kit" value="Molho de pimenta"> Molho de pimenta<br>
+        <input type="checkbox" name="kit" value="Molho shoyu"> Molho shoyu<br>
+        <input type="checkbox" name="kit" value="Palito"> Palito<br>
+        <input type="checkbox" name="kit" value="Guardanapo"> Guardanapo<br>
+        <input type="checkbox" name="kit" value="Leite"> Leite<br>
+        
+        <label for="observacoes">Observações adicionais:</label>
+        <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+        
+        <label for="assinatura">Assinatura da Copeira Responsável:</label>
+        <input type="text" id="assinatura" name="assinatura" required>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
